@@ -1,12 +1,12 @@
 ActiveAdmin.register Blog do
-    permit_params :company_name, :title, :description, :blog_image =>[], :logo_image =>[]
+    permit_params :company_name, :title, :description, :blog_image, :logo_image
 
     index do
         selectable_column
         id_column
         column :logo_image do |blog|
           if blog.logo_image.attached?
-            image_tag blog.logo_image
+            image_tag blog.logo_image, size: "80x80"
           end
         end
         column :company_name
@@ -14,7 +14,7 @@ ActiveAdmin.register Blog do
         column :description
         column :blog_image do |blog|
           if blog.blog_image.attached?
-            image_tag blog.blog_image
+            image_tag blog.blog_image, size: "80x80"
           end
         end
         column :created_at
@@ -26,7 +26,7 @@ ActiveAdmin.register Blog do
     attributes_table do
       row :logo_image do |blog|
         if blog.logo_image.attached?
-          image_tag blog.logo_image
+          image_tag blog.logo_image, size: "80x80"
         end
       end
       row :company_name
@@ -34,7 +34,7 @@ ActiveAdmin.register Blog do
       row :description
       row :blog_image do |blog|
         if blog.blog_image.attached?
-          image_tag blog.blog_image
+          image_tag blog.blog_image, size: "80x80"
         end
       end
       row :created_at
@@ -51,11 +51,11 @@ ActiveAdmin.register Blog do
 
   form do |f|
     f.inputs do
-      f.inputs :logo_image, as: :file
+      f.input :logo_image, as: :file
       f.inputs :company_name
       f.inputs :title
       f.inputs :description
-      f.inputs :blog_image, as: :file
+      f.input :blog_image, as: :file
     end
     f.actions
   end
