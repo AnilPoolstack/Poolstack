@@ -7,7 +7,7 @@ ActiveAdmin.register About do
     column :description
     column :image do |about|
       if about.image.attached?
-        image_tag about.image
+        image_tag about.image, size: "200x200"
       end
     end
     column :created_at
@@ -20,7 +20,7 @@ ActiveAdmin.register About do
       row :description
       row :image do |about|
         if about.image.attached?
-          image_tag about.image
+          image_tag about.image, size: "200x200"
         end
       end
       row :created_at
@@ -35,7 +35,7 @@ ActiveAdmin.register About do
   form do |f|
     f.inputs do
       f.input :description
-      f.input :image, as: :file
+      f.input :image, as: :file, size: "200x200"
     end
     f.actions
   end
