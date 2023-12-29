@@ -11,5 +11,7 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :blogs
-  resources :services
+  resources :services do
+    get 'category/:category_key', on: :collection, action: :index, as: :category
+  end
 end
