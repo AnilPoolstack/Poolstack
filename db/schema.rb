@@ -73,11 +73,28 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_29_072733) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "contacts", force: :cascade do |t|
+    t.string "full_name"
+    t.string "email"
+    t.text "message"
+    t.integer "contact_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "home_pages", force: :cascade do |t|
     t.string "company_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "content"
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string "service_name"
+    t.text "service_description"
+    t.integer "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

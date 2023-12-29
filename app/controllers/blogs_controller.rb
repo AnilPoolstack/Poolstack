@@ -4,17 +4,22 @@ class BlogsController < ApplicationController
 
     def index
       @blogs = Blog.all
-      render json: @blogs, each_serializer: BlogSerializer
+      
+      if @blogs.present?
+        render json: @blogs, each_serializer: BlogSerializer
+      else
+        render json: { message: "not found" }, status: :not_found
+      end
     end
   
     def show
-      render json: @blog, serializer: BlogSerializer
-    end
-  
-    def new
-      @blog = Blog.new(blog_params)
-    end
-  
+        if @blog.present?
+            render json: @blog, serializer: BlogSerializer
+        else
+            render json: {message: "not found"}, status: :not_found
+        end
+    end 
+    
     def edit
     end
   
@@ -22,9 +27,9 @@ class BlogsController < ApplicationController
       @blog = Blog.new(blog_params)
   
         if @blog.save
-           render json: @blog, serializer: BlogSerializer
+           render json: @blog, serializer: BlogSerializer, status: :created
         else
-           render json: @blog.errors, status: :unprocessable_entity 
+            render json: {message: "Blog Not Created"}, status: :unprocessable_entity 
         end
     end
   
@@ -32,19 +37,21 @@ class BlogsController < ApplicationController
         if @blog.update(blog_params)
           render json: @blog, serializer: BlogSerializer, status: :created
         else
-          render json: @blog.errors, status: :unprocessable_entity 
+            # render json: {message: "Sorry! Blog Not Updated"}, status: :unprocessable_entity
+            render json: { errors: @blog.errors.full_messages }, status: :unprocessable_entity
         end
-    end
+      end
+      
   
     def destroy
-      @blog.destroy!
+      @blog.destroy
         render json: {message: 'Successfully Deleted'}, status: :ok
     end
   
     private
   
       def find_blog
-        @blog = Blog.find(params[:id])
+        @blog = Blog.find_by(id: params[:id])
       end
   
       def blog_params
