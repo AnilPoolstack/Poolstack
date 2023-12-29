@@ -50,3 +50,8 @@ gem 'sass-rails'
 gem 'sassc-rails'
 gem 'devise'
 
+gem 'rspec-rails'
+gem 'simplecov', '0.17.0'
+gem 'rspec-sonarqube-formatter', '1.5.0'
+
+gem 'active_model_serializers'
