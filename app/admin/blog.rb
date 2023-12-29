@@ -52,9 +52,9 @@ ActiveAdmin.register Blog do
   form do |f|
     f.inputs do
       f.input :logo_image, as: :file
-      f.inputs :company_name
-      f.inputs :title
-      f.inputs :description
+      f.input :company_name
+      f.input :title
+      f.input :description, as: :quill_editor
       f.input :blog_image, as: :file
     end
     f.actions
