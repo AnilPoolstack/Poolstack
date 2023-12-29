@@ -13,7 +13,6 @@
 # it.
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-
 require 'simplecov'
 # require 'mock_redis'
 SimpleCov.start do
@@ -25,7 +24,6 @@ SimpleCov.start do
   add_group "bx_blocks", %r{bx_block.*}
   add_filter %r{vendor/ruby/ruby/2.*}
 end
-
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
