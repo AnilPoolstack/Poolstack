@@ -73,6 +73,15 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_28_065220) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "contacts", force: :cascade do |t|
+    t.string "full_name"
+    t.string "email"
+    t.text "message"
+    t.integer "contact_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "services", force: :cascade do |t|
     t.string "service_name"
     t.text "service_description"

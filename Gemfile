@@ -38,6 +38,7 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
+  gem 'shoulda-matchers'
 end
 
 group :development do
@@ -53,6 +54,8 @@ gem 'devise'
 gem 'rspec-rails'
 gem 'simplecov', '0.17.0'
 gem 'rspec-sonarqube-formatter', '1.5.0'
+gem 'factory_bot_rails'
+gem 'faker'
 
 gem 'active_model_serializers'
 gem 'activeadmin_quill_editor'
