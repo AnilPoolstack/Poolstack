@@ -11,5 +11,10 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :blogs
+  resources :home_pages, only: [:show, :index]
+  
+
+  
+
   resources :services
 end

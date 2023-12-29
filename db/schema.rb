@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_28_065220) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_29_072733) do
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
@@ -80,6 +80,13 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_28_065220) do
     t.integer "contact_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "home_pages", force: :cascade do |t|
+    t.string "company_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "content"
   end
 
   create_table "services", force: :cascade do |t|

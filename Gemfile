@@ -58,7 +58,13 @@ gem 'factory_bot_rails'
 gem 'faker'
 
 
-gem 'active_model_serializers'
+gem 'factory_bot_rails'
+gem 'faker'
+gem 'shoulda-matchers'
+gem 'rails-controller-testing'
 
 gem 'activeadmin_quill_editor'
 gem 'sassc'
+
+
+gem 'active_model_serializers'
