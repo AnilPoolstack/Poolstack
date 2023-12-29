@@ -3,9 +3,10 @@ require 'rails_helper'
 RSpec.describe "Blogs", type: :request do
 
   describe "GET /index" do
-        before(:each) do
-          @blog = Blog.create(company_name: "Poolstack Technologies", title: 'Web Development', description: "abcdhdhjfsjkfjsdfsikjsfhdjfhsdjfhdsjfhskjdhjdhcom")
-        end
+        # before(:each) do
+        #   blog = FactoryBot.build(:blog, company_name: "Poolstack Technologies", title: 'Web Development', description: "abcdhdhjfsjkfjsdfsikjsfhdjfhsdjfhdsjfhskjdhjdhcom")
+        #   blog.save
+        # end
 
     context "Get all the Blogs" do
 
@@ -54,7 +55,7 @@ RSpec.describe "Blogs", type: :request do
 
   end
 
-  context "Show the user" do  
+  describe "Show the user" do  
 
     it "should return a Blog" do
       blog = FactoryBot.create(:blog, title: "web development", company_name: "Poolstack")
@@ -84,7 +85,7 @@ RSpec.describe "Blogs", type: :request do
 
     it 'should raise an error for invalid data' do
       blog = FactoryBot.create(:blog, title: "web development", company_name: "Poolstack")
-      patch "/blogs/#{blog.id}", params: { blog: { company_name: "57678" } }
+      patch "/blogs/#{blog.id}", params: { blog: { company_name: "" } }
       expect(response).to have_http_status(422)
       res = JSON.parse(response.body)
       expect(res['errors']).to be_present
@@ -106,67 +107,3 @@ RSpec.describe "Blogs", type: :request do
   end
 
 end
-
-
-# require 'rails_helper'
-# RSpec.describe BlogsController, type: :request do
-#   describe "GET /index" do
-#     before(:each) do
-#       @blog = Blog.create(company_name: "Poolstack Technologies", title: 'Web Development', description: "abcdhdhjfsjkfjsdfsikjsfhdjfhsdjfhdsjfhskjdhjdhcom")
-#     end
-#     context "Get all articles" do
-#       it 'return all articles' do
-#         get "/blogs"
-#         expect(response).to have_http_status(200)
-#         res = JSON response.body
-#         expect(res.count).to eq(Blog.count)
-#       end
-#     end
-#     context "Get an articles" do
-#       it 'return a articles for show article api' do
-#         get "/blogs/#{@blog.id}"
-#         expect(response).to have_http_status(200)
-#         res = JSON response.body
-#         expect(res["id"]).to eq(@blog.id)
-#       end
-#       it 'raise error when passing wrong id' do
-#         get "/blogs/0"
-#         expect(response).to have_http_status(404)
-#         res = JSON response.body
-#         expect(res["message"]).to eq("not found")
-#       end
-#     end
-#     context "Create article" do
-#       it 'return a articles for show article api' do
-#         pre_blog_count = Blog.count
-#         post "/blogs", params: {blog: {company_name: "Poolstack Technologies", title: 'Web Development', description: "abcdhdhjfsjkfjsdfsikjsfhdjfhsdjfhdsjfhskjdhjdhcom"}}
-#         expect(response).to have_http_status(201)
-#         res = JSON response.body
-#         expect(Blog.count).to eq(pre_blog_count+1)
-#       end
-#       it 'raise error when pass wrong arguments' do
-#         post "/blogs", params: {blog: {title: "", company_name: ""}}
-#         expect(response).to have_http_status(422)
-#       end
-#     end
-#     context "Update article" do
-#       it 'update the fields of article' do
-#         patch "/blogs/#{@blog.id}", params: {blog: {title: "1 title"}}
-#         expect(response).to have_http_status(200)
-#         res = JSON response.body
-#         expect(Blog.find(@blog.id).title).to eq("1 title")
-#       end
-#       it 'raise error when pass wrong arguments' do
-#         patch "/blogs/#{@blog.id}", params: {blog: {title: nil}}
-#         expect(response).to have_http_status(422)
-#       end
-#     end
-#     context "Delete the articles" do
-#       it 'delete the given ids article' do
-#         delete "/blogs/#{@blog.id}"
-#         expect(response).to have_http_status(200)
-#         expect(Blog.find_by_id(@blog.id)).to eq(nil)
-#       end
-#     end
-#   end
-# end
