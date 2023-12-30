@@ -1,45 +1,43 @@
 class ServicesController < ApplicationController
   def index
-    category_key = params[:category_key]
-    if category_key.present?
-      if Service.categories.key?(category_key)
-        services = Service.where(category: Service.categories[category_key])
-        render json: services, each_serializer: ServiceSerializer
-      else
-        render json: { error: "Invalid category" }, status: :unprocessable_entity
-      end
+    @services = Service.all
+    if @services.present?
+      render json: @services, each_serializer: ServiceSerializer, status: :ok
     else
-      services = Service.all
-      render json: services, each_serializer: ServiceSerializer
+      render json: { message: "not found" }, status: :not_found
     end
   end
 
   def create
     @service = Service.new(service_params)
     if @service.save
-      render json: @service, serializer: ServiceSerializer
+      render json: @service, serializer: ServiceSerializer, status: :created
     else
-      render json: @service.errors, status: :unprocessable_entity 
+      render json: { error: 'Service not found' }, status: :unprocessable_entity
     end
   end
   
   def show
     @service=Service.find_by(id: params[:id])
-    render json: @service, serializer: ServiceSerializer
+    if @service.present?
+      render json: @service, serializer: ServiceSerializer, status: :ok
+    else
+      render json: {message: "not found"}, status: :not_found
+    end
   end
 
   def update
-    @service=Service.find_by(id: params[id])
-    if @service.present?
-      @service.update(service_params)
-      render json: @service, serializer: ServiceSerializer
+    @service=Service.find_by(id: params[:id])
+    if @service.update(service_params)
+      render json: @service, serializer: ServiceSerializer, status: :created
     else
-      render json: @service.errors, status: :unprocessable_entity 
+      render json: {errors: @service.errors.full_messages}, status: :unprocessable_entity
     end
   end
 
   private
   def service_params
-    params.require(:service).permit(:service_name, :service_description, :category, :service_image)
+    params.permit(:service_name, :service_description, :category, :service_image)
   end
+
 end
