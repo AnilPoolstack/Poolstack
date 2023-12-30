@@ -60,5 +60,4 @@ gem 'faker'
 gem 'active_model_serializers'
 gem 'activeadmin_quill_editor'
 gem 'sassc'
-gem 'factory_bot_rails'
-gem 'faker'
+
