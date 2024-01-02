@@ -12,9 +12,5 @@ Rails.application.routes.draw do
 
   resources :blogs
   resources :home_pages, only: [:show, :index]
-  
-
-  
-
   resources :services
 end
