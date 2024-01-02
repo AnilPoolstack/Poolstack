@@ -331,9 +331,9 @@ DEPENDENCIES
   country_select
   debug
   devise
-  phone
   factory_bot_rails
   faker
+  phone
   puma (>= 5.0)
   rails (= 7.1.1)
   rails-controller-testing
