@@ -56,3 +56,7 @@ gem 'simplecov', '0.17.0'
 gem 'rspec-sonarqube-formatter', '1.5.0'
 
 gem 'active_model_serializers'
+gem 'factory_bot_rails'
+gem 'shoulda-matchers', '~> 5.0'
+gem 'activeadmin_quill_editor'
+gem 'image_processing', '~> 1.2'

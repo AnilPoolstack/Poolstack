@@ -1,47 +1,60 @@
 class AboutsController < ApplicationController
-    # before_action :find_about, only: %i[show edit update destroy]
-
-  def index
-    @abouts = About.all
-    render json: @abouts
-  end
-
-  def show
-    render json: @about
-  end
-
-  def new
-    @about = About.new
-  end
-
-  def edit
-  end
-
-  def create
-    @about = About.new(about_params)
-
-    if @about.save
-      render json: @about
-    else
-      render json: @about.errors, status: :unprocessable_entity
+    def index
+        @abouts = About.all
+      
+        if @abouts.any?
+          render json: @abouts, status: :ok
+        else
+          render json: { message: 'No abouts found' }, status: :not_found
+        end
     end
-  end
 
-  def update
-    if @about.update(about_params)
-      render json: @about
-    else
-      render json: @about.errors, status: :unprocessable_entity
+    def show
+      @about = About.find_by(id: params[:id])
+  
+      if @about
+        render json: about_json(@about), status: :ok
+      else
+        render json: { error: 'About not found' }, status: :not_found
+      end
     end
-  end
 
-  private
+    def create
+      @about = About.new(about_params)
+  
+      if @about.save
+        render json: about_json(@about), status: :created
+      else
+        render json: { error: @about.errors.full_messages }, status: :unprocessable_entity
+      end
+    end
 
-  def find_about
-    @about = About.find(params[:id])
-  end
+    def update
+      @about = About.find_by( params[:id])
+    
+      unless @about
+        render json: { error: 'About not found' }, status: :not_found
+        return
+      end
+    end
 
-  def about_params
-    params.require(:about).permit(:description, :image)
-  end
+    private
+    def about_json(about)
+      {
+        id: about.id,
+        description: about.description,
+        image_url: about.image.attached? ? url_for(about.image).to_s : nil,
+        created_at: about.created_at,
+        updated_at: about.updated_at
+      }
+    end
+
+    def find_about
+        @about = About.find(params[:id])
+    end
+
+    def about_params
+      params.permit(:description, :image)
+    end
+    
 end

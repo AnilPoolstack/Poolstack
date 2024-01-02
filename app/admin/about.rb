@@ -14,8 +14,9 @@ ActiveAdmin.register About do
     column :updated_at
     actions
   end
+  
 
-  show do
+  show title: "About" do
     attributes_table do
       row :description
       row :image do |about|
@@ -28,13 +29,13 @@ ActiveAdmin.register About do
     end
   end
 
-  filter :description
+  # filter :description
   filter :created_at
   filter :updated_at
 
   form do |f|
     f.inputs do
-      f.input :description
+      f.input :description, as: :quill_editor
       f.input :image, as: :file, size: "200x200"
     end
     f.actions
