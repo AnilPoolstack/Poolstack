@@ -1,19 +1,22 @@
 ActiveAdmin.register Blog do
-    permit_params :company_name, :title, :description, :blog_image =>[], :logo_image =>[]
+    permit_params :company_name, :title, :description, :blog_image, :logo_image
+
     index do
         selectable_column
         id_column
         column :logo_image do |blog|
           if blog.logo_image.attached?
-            image_tag blog.logo_image
+            image_tag blog.logo_image, size: "80x80"
           end
         end
         column :company_name
         column :title
-        column :description
+        column :description do |blog|
+          raw blog.description.gsub(/<img/, '<img style="max-width: 100px; max-height: 100px;"')
+        end
         column :blog_image do |blog|
           if blog.blog_image.attached?
-            image_tag blog.blog_image
+            image_tag blog.blog_image, size: "80x80"
           end
         end
         column :created_at
@@ -25,17 +28,17 @@ ActiveAdmin.register Blog do
     attributes_table do
       row :logo_image do |blog|
         if blog.logo_image.attached?
-          image_tag blog.logo_image
+          image_tag blog.logo_image, size: "80x80"
         end
       end
       row :company_name
       row :title
       row :description do |blog|
-        raw blog.description
+        raw blog.description.gsub(/<img/, '<img style="max-width: 100px; max-height: 100px;"')
       end
       row :blog_image do |blog|
         if blog.blog_image.attached?
-          image_tag blog.blog_image
+          image_tag blog.blog_image, size: "80x80"
         end
       end
       row :created_at
@@ -52,11 +55,11 @@ ActiveAdmin.register Blog do
 
   form do |f|
     f.inputs do
-      f.inputs :logo_image, as: :file
-      f.inputs :company_name
-      f.inputs :title
-      f.inputs :description
-      f.inputs :blog_image, as: :file
+      f.input :logo_image, as: :file
+      f.input :company_name
+      f.input :title
+      f.input :description, as: :quill_editor
+      f.input :blog_image, as: :file
     end
     f.actions
   end
