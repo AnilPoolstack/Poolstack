@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/poolstack/anushka_service/Poolstack/spec/models/blog_spec.rb": [
+      "/home/poolstack/main/Poolstack/spec/models/blog_spec.rb": [
         1,
         null,
         1,
@@ -52,7 +52,7 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/spec/rails_helper.rb": [
+      "/home/poolstack/main/Poolstack/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -119,14 +119,14 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/config/environment.rb": [
+      "/home/poolstack/main/Poolstack/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/home/poolstack/anushka_service/Poolstack/config/application.rb": [
+      "/home/poolstack/main/Poolstack/config/application.rb": [
         null,
         null,
         null,
@@ -204,13 +204,13 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/config/boot.rb": [
+      "/home/poolstack/main/Poolstack/config/boot.rb": [
         1,
         null,
         1,
         1
       ],
-      "/home/poolstack/anushka_service/Poolstack/config/environments/test.rb": [
+      "/home/poolstack/main/Poolstack/config/environments/test.rb": [
         1,
         null,
         null,
@@ -276,7 +276,7 @@
         1,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/config/initializers/active_admin.rb": [
+      "/home/poolstack/main/Poolstack/config/initializers/active_admin.rb": [
         1,
         null,
         null,
@@ -630,7 +630,7 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/config/initializers/cors.rb": [
+      "/home/poolstack/main/Poolstack/config/initializers/cors.rb": [
         null,
         null,
         null,
@@ -648,7 +648,7 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/config/initializers/devise.rb": [
+      "/home/poolstack/main/Poolstack/config/initializers/devise.rb": [
         null,
         null,
         null,
@@ -963,7 +963,7 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/config/initializers/filter_parameter_logging.rb": [
+      "/home/poolstack/main/Poolstack/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
@@ -973,7 +973,7 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/config/initializers/inflections.rb": [
+      "/home/poolstack/main/Poolstack/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -991,7 +991,7 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/spec/factories/blog.rb": [
+      "/home/poolstack/main/Poolstack/spec/factories/blog.rb": [
         1,
         1,
         1,
@@ -1002,7 +1002,17 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/spec/factories/home_pages.rb": [
+      "/home/poolstack/main/Poolstack/spec/factories/contacts.rb": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/home/poolstack/main/Poolstack/spec/factories/home_pages.rb": [
         1,
         1,
         1,
@@ -1010,7 +1020,7 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/spec/factories/service.rb": [
+      "/home/poolstack/main/Poolstack/spec/factories/service.rb": [
         1,
         1,
         1,
@@ -1019,7 +1029,7 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/config/routes.rb": [
+      "/home/poolstack/main/Poolstack/config/routes.rb": [
         1,
         1,
         1,
@@ -1032,19 +1042,20 @@
         null,
         null,
         null,
+        1,
         1,
         1,
         1,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/app/controllers/application_controller.rb": [
+      "/home/poolstack/main/Poolstack/app/controllers/application_controller.rb": [
         1,
         1,
         24,
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/app/models/admin_user.rb": [
+      "/home/poolstack/main/Poolstack/app/models/admin_user.rb": [
         1,
         null,
         null,
@@ -1052,7 +1063,7 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/app/models/application_record.rb": [
+      "/home/poolstack/main/Poolstack/app/models/application_record.rb": [
         null,
         1,
         1,
@@ -1064,7 +1075,7 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/app/admin/admin_users.rb": [
+      "/home/poolstack/main/Poolstack/app/admin/admin_users.rb": [
         1,
         1,
         null,
@@ -1084,75 +1095,6 @@
         1,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        null,
-        null,
-        null
-      ],
-      "/home/poolstack/anushka_service/Poolstack/app/admin/blog.rb": [
-        1,
-        1,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        0,
-        0,
         0,
         0,
         0,
@@ -1163,7 +1105,76 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/app/models/blog.rb": [
+      "/home/poolstack/main/Poolstack/app/admin/blog.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/poolstack/main/Poolstack/app/models/blog.rb": [
         1,
         1,
         1,
@@ -1171,53 +1182,9 @@
         1,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/app/admin/contacts.rb": [
+      "/home/poolstack/main/Poolstack/app/admin/contacts.rb": [
         1,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/poolstack/anushka_service/Poolstack/app/models/contact.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/home/poolstack/anushka_service/Poolstack/app/admin/dashboard.rb": [
-        null,
-        1,
-        1,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null,
         null,
         null,
@@ -1235,7 +1202,51 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/app/admin/home_page.rb": [
+      "/home/poolstack/main/Poolstack/app/models/contact.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/poolstack/main/Poolstack/app/admin/dashboard.rb": [
+        null,
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/poolstack/main/Poolstack/app/admin/home_page.rb": [
         1,
         1,
         null,
@@ -1298,7 +1309,7 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/app/models/home_page.rb": [
+      "/home/poolstack/main/Poolstack/app/models/home_page.rb": [
         1,
         1,
         1,
@@ -1306,7 +1317,7 @@
         1,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/app/admin/service.rb": [
+      "/home/poolstack/main/Poolstack/app/admin/service.rb": [
         1,
         1,
         null,
@@ -1369,7 +1380,7 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/app/models/service.rb": [
+      "/home/poolstack/main/Poolstack/app/models/service.rb": [
         1,
         1,
         1,
@@ -1377,7 +1388,7 @@
         1,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/spec/models/home_page_spec.rb": [
+      "/home/poolstack/main/Poolstack/spec/models/home_page_spec.rb": [
         1,
         null,
         1,
@@ -1423,7 +1434,7 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/spec/models/service_spec.rb": [
+      "/home/poolstack/main/Poolstack/spec/models/service_spec.rb": [
         1,
         null,
         1,
@@ -1501,7 +1512,7 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/spec/requests/blogs_spec.rb": [
+      "/home/poolstack/main/Poolstack/spec/requests/blogs_spec.rb": [
         1,
         null,
         1,
@@ -1613,7 +1624,54 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/spec/requests/home_pages_spec.rb": [
+      "/home/poolstack/main/Poolstack/spec/requests/contacts_controller_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/poolstack/main/Poolstack/app/controllers/contacts_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        null,
+        2,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/home/poolstack/main/Poolstack/spec/requests/home_pages_spec.rb": [
         1,
         null,
         1,
@@ -1679,7 +1737,7 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/app/controllers/home_pages_controller.rb": [
+      "/home/poolstack/main/Poolstack/app/controllers/home_pages_controller.rb": [
         1,
         1,
         3,
@@ -1713,7 +1771,7 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/spec/requests/services_spec.rb": [
+      "/home/poolstack/main/Poolstack/spec/requests/services_spec.rb": [
         1,
         1,
         1,
@@ -1789,7 +1847,7 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/app/controllers/blogs_controller.rb": [
+      "/home/poolstack/main/Poolstack/app/controllers/blogs_controller.rb": [
         1,
         null,
         1,
@@ -1851,7 +1909,7 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/app/serializers/blog_serializer.rb": [
+      "/home/poolstack/main/Poolstack/app/serializers/blog_serializer.rb": [
         1,
         1,
         null,
@@ -1875,7 +1933,22 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/app/controllers/services_controller.rb": [
+      "/home/poolstack/main/Poolstack/app/mailers/contact_mailer.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/poolstack/main/Poolstack/app/mailers/application_mailer.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/home/poolstack/main/Poolstack/app/controllers/services_controller.rb": [
         1,
         1,
         2,
@@ -1915,7 +1988,7 @@
         null,
         null
       ],
-      "/home/poolstack/anushka_service/Poolstack/app/serializers/service_serializer.rb": [
+      "/home/poolstack/main/Poolstack/app/serializers/service_serializer.rb": [
         1,
         1,
         1,
@@ -1930,6 +2003,6 @@
         null
       ]
     },
-    "timestamp": 1704192623
+    "timestamp": 1704195591
   }
 }
