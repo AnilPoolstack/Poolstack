@@ -31,7 +31,9 @@ ActiveAdmin.register Blog do
       end
       row :company_name
       row :title
-      row :description
+      row :description do |blog|
+        raw blog.description
+      end
       row :blog_image do |blog|
         if blog.blog_image.attached?
           image_tag blog.blog_image

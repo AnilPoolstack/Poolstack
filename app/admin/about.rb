@@ -4,7 +4,9 @@ ActiveAdmin.register About do
   index do
     selectable_column
     id_column
-    column :description
+    column :description do |about|
+      raw about.description.gsub(/<img/, '<img style="max-width:100px; max-height:100px;"')
+    end
     column :image do |about|
       if about.image.attached?
         image_tag about.image, size: "200x200"
@@ -18,7 +20,9 @@ ActiveAdmin.register About do
 
   show title: "About" do
     attributes_table do
-      row :description
+      row :description do |about|
+        raw about.description.gsub(/<img/, '<img style="max-width:100px; max-height:100px;"')
+      end
       row :image do |about|
         if about.image.attached?
           image_tag about.image, size: "200x200"

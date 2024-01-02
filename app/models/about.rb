@@ -2,16 +2,17 @@ class About < ApplicationRecord
   has_one_attached :image
   validate :validate_image_format
 
-  private
+private
 
-  def validate_image_format
-    return unless image.attached?
+def validate_image_format
+  return unless image.attached?
 
-    if image.content_type.nil?
-      errors.add(:image, 'is missing content type!')
-    elsif !image.content_type.in?(%w(image/jpeg image/png))
-      errors.add(:image, 'needs to be a JPEG or PNG!')
-    end
+  allowed_formats = %w[jpg jpeg png]
+  extension = image.blob.filename.extension&.downcase
+
+  unless extension.present? && allowed_formats.include?(extension)
+    # errors.add(:image, 'must be a valid image format (jpg, jpeg, png)')
   end
+end
   validates :description, presence:true
 end

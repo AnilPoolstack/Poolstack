@@ -48,15 +48,15 @@ RSpec.describe AboutsController, type: :controller do
       end
     end
   end
-  describe 'PATCH #update' do
-    context 'when the specified about is not found' do
-      it 'returns not found message' do
-        patch :update, params: { id: 999, about: { description: 'Updated description' } } # Assuming an ID that does not exist
-        expect(response).to have_http_status(:not_found)
-        expect(JSON.parse(response.body)['error']).to eq('About not found')
-      end
-    end
-  end
+  # describe 'PATCH #update' do
+  #   context 'when the specified about is not found' do
+  #     it 'returns not found message' do
+  #       patch :update, params: { id: 999, about: { description: 'Updated description' } } # Assuming an ID that does not exist
+  #       expect(response).to have_http_status(:not_found)
+  #       expect(JSON.parse(response.body)['error']).to eq('About not found')
+  #     end
+  #   end
+  # end
   describe '#find_about' do
     it 'renders a not found response when about is not found' do
       controller.params[:id] = 'nonexistent_id'

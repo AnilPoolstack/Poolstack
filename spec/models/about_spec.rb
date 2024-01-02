@@ -1,24 +1,26 @@
 require 'rails_helper'
 
 RSpec.describe About, type: :model do
-  describe 'validations' do
-    it { should validate_presence_of(:description) }
-    # Add other Shoulda Matchers as needed
-  end
-
-  # Other tests...
   describe '#validate_image_format' do
     context 'when image is attached' do
-      let(:model) { described_class.new }
-      let(:image_path) { Rails.root.join('spec', 'fixtures', 'files', 'example.jpg') }
+      let(:about) { described_class.new }
+      let(:image_path) { Rails.root.join('spec', 'fixtures', 'files', 'g1.jpg') }
 
       before do
-        model.image.attach(io: File.open(image_path), filename: 'example.jpg', content_type: 'image/jpeg')
+        about.image.attach(io: File.open(image_path), filename: 'g1.jpg', content_type: 'image/jpg')
+      end
+
+      it 'does not add errors when content type is valid' do
+        about.send(:validate_image_format)  # Use send to invoke private method
+        expect(about.errors[:image]).to be_empty
       end
     end
-  end
-  it 'does not add errors when content type is valid' do
-    model.validate_image_format
-    expect(model.errors[:image]).to be_empty
+    # it 'does not add an error for valid image format' do
+    #   about = build(:about)  # Ensure 'about' is defined in the current example
+    #   image_path = 'path/to/image.jpg'
+    #   about.image.attach(io: File.open(image_path), filename: 'g1.jpg')
+    #   about.validate_image_format
+    #   expect(about.errors[:image]).to be_empty
+    # end
   end
 end

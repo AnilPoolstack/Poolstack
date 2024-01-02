@@ -1,4 +1,5 @@
 class AboutsController < ApplicationController
+  
     def index
         @abouts = About.all
       
@@ -26,15 +27,6 @@ class AboutsController < ApplicationController
         render json: about_json(@about), status: :created
       else
         render json: { error: @about.errors.full_messages }, status: :unprocessable_entity
-      end
-    end
-
-    def update
-      @about = About.find_by( params[:id])
-    
-      unless @about
-        render json: { error: 'About not found' }, status: :not_found
-        return
       end
     end
 
