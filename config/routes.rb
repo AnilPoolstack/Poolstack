@@ -12,4 +12,7 @@ Rails.application.routes.draw do
 
   resources :blogs
   resources :services
+  resources :contacts, only: [:create]
+  # post "/contacts", to:"contacts#create"
+
 end
