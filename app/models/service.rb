@@ -1,6 +1,15 @@
 class Service < ApplicationRecord
   enum :category, [:frontend_development, :backend_development, :devops]
   validates :category,:service_description, presence: { message: "Can't be blank" }
-  validates :service_name, presence: { message: "Can't be blank" },format: { with: /\A[a-z A-Z\s]+\z/, message: "only allows letters and spaces" },length: { minimum: 2, maximum: 35, message: "should be between 2 and 50 characters" }
+  validates :service_name, presence: { message: "Can't be blank" },format: { with: /\A[a-z A-Z\s]+\z/, message: "only allows letters and spaces" },length: { minimum: 2, maximum: 35, message: "should be between 2 and 35 characters" }
   has_one_attached :service_image
+  validates :service_image, presence: true
+  validate :validate_service_image_content_type
+
+  private
+    def validate_service_image_content_type
+      if service_image.attached? && !service_image.content_type.in?(%w(image/jpeg image/png image/jpg ))
+        errors.add(:service_image, 'must be a JPG, JPEG or PNG')
+      end
+    end 
 end
