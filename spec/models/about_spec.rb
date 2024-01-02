@@ -15,12 +15,22 @@ RSpec.describe About, type: :model do
         expect(about.errors[:image]).to be_empty
       end
     end
-    # it 'does not add an error for valid image format' do
-    #   about = build(:about)  # Ensure 'about' is defined in the current example
-    #   image_path = 'path/to/image.jpg'
-    #   about.image.attach(io: File.open(image_path), filename: 'g1.jpg')
-    #   about.validate_image_format
-    #   expect(about.errors[:image]).to be_empty
+    it "is invalid without an image" do
+      about = FactoryBot.build(:about, image: nil)
+      about.valid?
+      expect(about.errors[:image]).to include("can't be blank")
+    end
+
+    # it "is valid with an image" do
+    #   about = FactoryBot.build(:about)
+    #   expect(about).to be_valid
     # end
+    it "is invalid without an image and returns the expected error message" do
+      about = FactoryBot.build(:about, image: nil)
+      about.valid?
+
+      expect(about).not_to be_valid
+      expect(about.errors[:image]).to include("can't be blank")
+    end
   end
 end
