@@ -7,7 +7,7 @@ gem 'rails', '7.1.1'
 
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
-
+gem 'countries'
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
@@ -38,6 +38,7 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
+  gem 'shoulda-matchers'
 end
 
 group :development do
@@ -49,9 +50,21 @@ gem 'activeadmin'
 gem 'sass-rails'
 gem 'sassc-rails'
 gem 'devise'
+gem 'phone'
+gem 'country_select'
 
 gem 'rspec-rails'
 gem 'simplecov', '0.17.0'
 gem 'rspec-sonarqube-formatter', '1.5.0'
+gem 'factory_bot_rails'
+gem 'faker'
+
+
+gem 'shoulda-matchers'
+gem 'rails-controller-testing'
+
+gem 'activeadmin_quill_editor'
+gem 'sassc'
+
 
 gem 'active_model_serializers'
