@@ -7,7 +7,7 @@ gem 'rails', '7.1.1'
 
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
-
+gem 'countries'
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
@@ -49,4 +49,5 @@ gem 'activeadmin'
 gem 'sass-rails'
 gem 'sassc-rails'
 gem 'devise'
-
+gem 'phone'
+gem 'country_select'
