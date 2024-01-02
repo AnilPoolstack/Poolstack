@@ -103,6 +103,10 @@ GEM
       activesupport
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
+    countries (5.7.1)
+      unaccent (~> 0.3)
+    country_select (8.0.3)
+      countries (~> 5.0)
     crass (1.0.6)
     date (3.3.4)
     debug (1.9.1)
@@ -191,6 +195,7 @@ GEM
     nokogiri (1.16.0-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    phone (1.2.3)
     psych (5.1.2)
       stringio
     puma (6.4.0)
@@ -305,6 +310,7 @@ GEM
     timeout (0.4.1)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    unaccent (0.4.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     webrick (1.8.1)
@@ -321,10 +327,13 @@ DEPENDENCIES
   activeadmin
   activeadmin_quill_editor
   bootsnap
+  countries
+  country_select
   debug
   devise
   factory_bot_rails
   faker
+  phone
   puma (>= 5.0)
   rails (= 7.1.1)
   rails-controller-testing
