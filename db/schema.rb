@@ -80,6 +80,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_29_072733) do
     t.integer "contact_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "country_code"
   end
 
   create_table "home_pages", force: :cascade do |t|
