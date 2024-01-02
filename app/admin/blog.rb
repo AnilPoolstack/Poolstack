@@ -12,7 +12,7 @@ ActiveAdmin.register Blog do
         column :company_name
         column :title
         column :description do |blog|
-          raw blog.description
+          raw blog.description.gsub(/<img/, '<img style="max-width: 100px; max-height: 100px;"')
         end
         column :blog_image do |blog|
           if blog.blog_image.attached?
@@ -34,7 +34,7 @@ ActiveAdmin.register Blog do
       row :company_name
       row :title
       row :description do |blog|
-        raw blog.description
+        raw blog.description.gsub(/<img/, '<img style="max-width: 100px; max-height: 100px;"')
       end
       row :blog_image do |blog|
         if blog.blog_image.attached?
