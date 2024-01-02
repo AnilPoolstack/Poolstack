@@ -1,6 +1,5 @@
 ActiveAdmin.register Blog do
     permit_params :company_name, :title, :description, :blog_image =>[], :logo_image =>[]
-
     index do
         selectable_column
         id_column
