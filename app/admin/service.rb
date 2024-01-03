@@ -25,9 +25,12 @@ ActiveAdmin.register Service do
     actions
   end
 
-  show do |service|
+  show  title:"service" do |service|
     attributes_table do
-      row :category_id
+      row :id do
+        service.id
+      end
+      row :category
       row :service_name
       row :service_description do |service|
         raw service.service_description.gsub(/<img/, '<img style="max-width: 100px; max-height: 100px;"')
