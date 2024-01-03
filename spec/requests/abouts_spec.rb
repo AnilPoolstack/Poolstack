@@ -87,7 +87,7 @@ RSpec.describe AboutsController, type: :controller do
     it 'returns unprocessable_entity when parameters are missing' do
       post :create
 
-      expect(response).to have_http_status(:unprocessable_entity)
+      expect(response).to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 have_http_status(:unprocessable_entity)
       expect(json_response).to include('error')
     end
   end
@@ -100,7 +100,7 @@ RSpec.describe AboutsController, type: :controller do
       expected_json = {
         id: about.id,
         description: about.description,
-        image_url: about.image.attached? ? Rails.application.routes.url_helpers.rails_blob_path(about.image, only_path: true) : nil,
+        image_url: about.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image.attached? ? Rails.application.routes.url_helpers.rails_blob_path(about.image, only_path: true) : nil,
         created_at: about.created_at,
         updated_at: about.updated_at
       }

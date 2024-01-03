@@ -11,7 +11,7 @@ RSpec.describe About, type: :model do
       end
 
       it 'does not add errors when content type is valid' do
-        about.send(:validate_image_format)  # Use send to invoke private method
+        about.send(:validate_image_format)  
         expect(about.errors[:image]).to be_empty
       end
     end
@@ -20,11 +20,6 @@ RSpec.describe About, type: :model do
       about.valid?
       expect(about.errors[:image]).to include("can't be blank")
     end
-
-    # it "is valid with an image" do
-    #   about = FactoryBot.build(:about)
-    #   expect(about).to be_valid
-    # end
     it "is invalid without an image and returns the expected error message" do
       about = FactoryBot.build(:about, image: nil)
       about.valid?
