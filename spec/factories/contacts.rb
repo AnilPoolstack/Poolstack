@@ -4,5 +4,7 @@ FactoryBot.define do
       email { 'john.doe@example.com' }
       contact_number { '1234567890' }
       message { 'Testing data' }
+      country_code { 91 }
+
     end
   end

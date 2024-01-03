@@ -1,12 +1,12 @@
 class BlogsController < ApplicationController
-
+  
     before_action :find_blog, only: %i[ show edit update destroy ]
 
     def index
       @blogs = Blog.all
       
       if @blogs.present?
-        render json: @blogs, each_serializer: BlogSerializer
+        render json: @blogs, each_serializer: BlogSerializer, status: :ok
       else
         render json: { message: "not found" }, status: :not_found
       end
@@ -14,7 +14,7 @@ class BlogsController < ApplicationController
   
     def show
         if @blog.present?
-            render json: @blog, serializer: BlogSerializer
+            render json: @blog, serializer: BlogSerializer, status: :ok
         else
             render json: {message: "not found"}, status: :not_found
         end
@@ -37,8 +37,7 @@ class BlogsController < ApplicationController
         if @blog.update(blog_params)
           render json: @blog, serializer: BlogSerializer, status: :created
         else
-            # render json: {message: "Sorry! Blog Not Updated"}, status: :unprocessable_entity
-            render json: { errors: @blog.errors.full_messages }, status: :unprocessable_entity
+            render json: {message: "Sorry! Blog Not Updated"}, status: :unprocessable_entity
         end
       end
       
