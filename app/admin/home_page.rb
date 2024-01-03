@@ -23,7 +23,7 @@ ActiveAdmin.register HomePage do
     actions
   end
 
-  show do
+  show  title: "Home Page" do
     attributes_table do
       row :logo_image do |home_page|
         if home_page.logo_image.attached?
