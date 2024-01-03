@@ -2,7 +2,7 @@ class HomePage < ApplicationRecord
   has_one_attached :logo_image
   has_one_attached :background_image
   validates :company_name, presence: true, length: { minimum: 1, maximum: 20 }
-  validates :content, presence: true, length: { minimum: 2, maximum: 200 }
+  validates :content, presence: true, length: { minimum: 2}
   validates :logo_image, presence: { message: 'logo image must be attached' }
   validates :background_image, presence: { message: 'background image must be attached' }
   validate :validate_logo_image_content_type
