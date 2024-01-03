@@ -84,7 +84,6 @@ RSpec.describe "Blogs", type: :request do
     end
 
     it 'should raise an error for invalid data' do
-      debugger
       blog = FactoryBot.create(:blog, title: "web development", company_name: "Poolstack")
       patch "/blogs/#{blog.id}", params: { blog: { company_name: "" } }
       expect(response).to have_http_status(422)

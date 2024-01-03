@@ -14,6 +14,8 @@
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'simplecov'
+require 'factory_bot_rails'
+
 # require 'mock_redis'
 SimpleCov.start do
   add_group "Models", "app/models"
@@ -25,6 +27,9 @@ SimpleCov.start do
   add_filter %r{vendor/ruby/ruby/2.*}
 end
 RSpec.configure do |config|
+
+  config.include FactoryBot::Syntax::Methods
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.

@@ -1,8 +1,8 @@
 FactoryBot.define do
-    factory :comment do
-      content { 'Sample Comment Content' }
-      email { 'example@example.com' }
-      blog_id {1}
-      association :blog # Asuming there's a Blog model and comments belong to blogs
-    end
+  factory :comment do
+    content { Faker::Lorem.paragraph }
+    email { Faker::Internet.email }
+    blog_id { 1 }
+    association :blog 
+  end
 end
