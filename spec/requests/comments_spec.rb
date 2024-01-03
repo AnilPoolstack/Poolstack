@@ -34,6 +34,7 @@ RSpec.describe 'Comments API', type: :request do
 
     context 'when the comment does not exist' do
       it 'returns a not_found response' do
+        Comment.destroy_all
         non_existent_id = nil
 
         get "/comments/#{non_existent_id}"

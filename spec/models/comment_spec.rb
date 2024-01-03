@@ -27,19 +27,20 @@ RSpec.describe Comment, type: :model do
     end
     
     it "To check the minimum length of content" do
-      comment = Comment.new(content: 'a' * 4 )
+      comment = Comment.new(content: 'a' * 1 )
       comment.valid?
-      expect(comment.errors[:content]).to include("should be between 5 and 1000 characters")
+      expect(comment.errors[:content]).to include("should be between 2 and 1000 characters")
     end
   
     it "To check the maximum length of content" do
       comment = Comment.new(content: 'a' * 1001 )
       comment.valid?
-      expect(comment.errors[:content]).to include("should be between 5 and 1000 characters")
+      expect(comment.errors[:content]).to include("should be between 2 and 1000 characters")
     end
   end
 
   describe 'associations' do
     it { should belong_to(:blog) }
   end
+  
 end
