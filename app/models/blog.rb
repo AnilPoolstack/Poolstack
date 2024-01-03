@@ -11,14 +11,16 @@ class Blog < ApplicationRecord
     validate :validate_blog_image_content_type
     private
     def validate_logo_image_content_type
-        if logo_image.attached? && !logo_image.content_type.in?(%w(image/jpeg image/png image/jpg image/gif))
-            errors.add(:logo_image, 'must be a JPEG, JPG, GIF or PNG')
+        allowed_types = %w(image/jpeg image/png image/jpg image/gif)
+        unless logo_image.attached? && logo_image.content_type.in?(allowed_types)
+            errors.add(:logo_image, 'must be an allowed image type (JPEG or PNG, GIF or JPG)')
         end
     end 
 
     def validate_blog_image_content_type
-        if blog_image.attached? && !blog_image.content_type.in?(%w(image/jpeg image/png image/jpg image/gif))
-            errors.add(:blog_image, 'must be a JPEG, JPG, GIF or PNG')
+        allowed_types = %w(image/jpeg image/png image/jpg image/gif)
+        unless blog_image.attached? && blog_image.content_type.in?(allowed_types)
+            errors.add(:blog_image, 'must be an allowed image type (JPEG or PNG, GIF or JPG)')
         end
     end 
 

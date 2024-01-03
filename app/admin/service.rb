@@ -2,7 +2,6 @@ ActiveAdmin.register Service do
   permit_params :service_name, :service_description, :service_image, :category_id
 
   scope("All Categories", default: true) { |scope| scope.all }
-
   Category.pluck(:name).each do |name|
     scope(name.titleize) do |scope|
       scope.includes(:category).where(categories: { name: name })
