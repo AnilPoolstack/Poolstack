@@ -8,11 +8,6 @@ RSpec.describe Service, type: :model do
     expect(service.valid?).to eq(false)
   end
 
-  it"To check the presence of category " do
-    service=Service.new(category: nil)
-    expect(service.valid?).to eq(false)
-  end
-
   it"To check the presence of description " do
     service=Service.new(service_description: nil)
     expect(service.valid?).to eq(false)
@@ -22,7 +17,6 @@ RSpec.describe Service, type: :model do
     service=Service.new(service_image: nil)
     expect(service.valid?).to eq(false)
   end
-
 
   context "validation" do
     it "To check the minimum length of service_name" do

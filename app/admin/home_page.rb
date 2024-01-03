@@ -16,14 +16,14 @@ ActiveAdmin.register HomePage do
       end
     end
     column :content do |home_page|
-      raw home_page.content
+      raw home_page.content.gsub(/<img/, '<img style="max-width: 100px; max-height: 100px;"')
     end
     column :created_at
     column :updated_at
     actions
   end
 
-  show do
+  show  title: "Home Page" do
     attributes_table do
       row :logo_image do |home_page|
         if home_page.logo_image.attached?
@@ -37,7 +37,7 @@ ActiveAdmin.register HomePage do
         end
       end
       row :content do |home_page|
-        raw home_page.content
+      raw home_page.content.gsub(/<img/, '<img style="max-width: 100px; max-height: 100px;"')
       end
       row :created_at
       row :updated_at

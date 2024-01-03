@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_02_082742) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_03_070250) do
   create_table "abouts", force: :cascade do |t|
     t.text "description"
     t.datetime "created_at", null: false
@@ -79,6 +79,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_02_082742) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "comments", force: :cascade do |t|
     t.string "email"
     t.text "content"
@@ -108,12 +114,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_02_082742) do
   create_table "services", force: :cascade do |t|
     t.string "service_name"
     t.text "service_description"
-    t.integer "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "category_id"
+    t.index ["category_id"], name: "index_services_on_category_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "blogs"
+  add_foreign_key "services", "categories"
 end
