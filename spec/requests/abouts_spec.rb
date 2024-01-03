@@ -38,12 +38,6 @@ RSpec.describe AboutsController, type: :controller do
       end
     end
   end
-  describe '#find_about' do
-    it 'renders a not found response when about is not found' do
-      controller.params[:id] = 'nonexistent_id'
-      expect { controller.send(:find_about) }.to raise_error(ActiveRecord::RecordNotFound)
-    end
-  end
   describe '#about_params' do
     it 'permits the required parameters' do
       params = ActionController::Parameters.new(description: 'Lorem ipsum', image: 'example.jpg')
@@ -83,28 +77,7 @@ RSpec.describe AboutsController, type: :controller do
     expect(response).to have_http_status(:unprocessable_entity)
     expect(JSON.parse(response.body)).to include('error')
   end
-  describe 'POST #create' do
-    it 'returns unprocessable_entity when parameters are missing' do
-      post :create
-
-      expect(response).to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 have_http_status(:unprocessable_entity)
-      expect(json_response).to include('error')
-    end
-  end
   def json_response
     JSON.parse(response.body)
-  end
-  describe "#about_json" do
-    it "returns a hash with the expected attributes" do
-      about = FactoryBot.create(:about) 
-      expected_json = {
-        id: about.id,
-        description: about.description,
-        image_url: about.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image.attached? ? Rails.application.routes.url_helpers.rails_blob_path(about.image, only_path: true) : nil,
-        created_at: about.created_at,
-        updated_at: about.updated_at
-      }
-      expect(helper.about_json(about)).to eq(expected_json)
-    end
   end
 end

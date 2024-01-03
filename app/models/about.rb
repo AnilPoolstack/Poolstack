@@ -1,11 +1,8 @@
 class About < ApplicationRecord
   has_one_attached :image
-  
   validate :validate_image_format
   validates :description,:image, presence:true
-
   private
-
   def validate_image_format
     return unless image.attached?
 
