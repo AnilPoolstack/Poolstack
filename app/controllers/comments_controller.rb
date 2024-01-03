@@ -54,11 +54,11 @@ class CommentsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_comment
       @comment = Comment.find_by(id: params[:id])
-      if @comment
+      # if @comment
         
-      else
-        render json: { error: "Comment not found" }, status: :not_found
-      end
+      # else
+      #   render json: { error: "Comment not found" }, status: :not_found
+      # end
     end
     
   
