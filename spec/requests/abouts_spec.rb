@@ -179,4 +179,19 @@ RSpec.describe AboutsController, type: :controller do
 
   #   expect(about.to_hash).to eq(expected_hash)
   # end
+  describe "#about_json" do
+    it "returns a hash with the expected attributes" do
+      about = FactoryBot.create(:about) # Assuming you have a factory for About
+
+      expected_json = {
+        id: about.id,
+        description: about.description,
+        image_url: about.image.attached? ? Rails.application.routes.url_helpers.rails_blob_path(about.image, only_path: true) : nil,
+        created_at: about.created_at,
+        updated_at: about.updated_at
+      }
+
+      expect(helper.about_json(about)).to eq(expected_json)
+    end
+  end
 end
