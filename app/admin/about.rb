@@ -5,8 +5,12 @@ ActiveAdmin.register About do
     selectable_column
     id_column
     column :description do |about|
-      raw about.description.gsub(/<img/, '<img style="max-width:100px; max-height:100px;"')
-    end
+      truncated_length = 500
+      complete_description = strip_tags(about.description)
+      truncated_description = truncate(complete_description, length: truncated_length)
+      truncated_description += link_to('See more', admin_about_path(about)) if complete_description.length > truncated_length
+      raw(truncated_description.gsub(/<img/, '<img style="max-width: 80px; max-height: 80px;"'))
+   end
     column :image do |about|
       if about.image.attached?
         image_tag about.image, size: "200x200"
