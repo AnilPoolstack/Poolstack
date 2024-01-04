@@ -3,7 +3,7 @@ FactoryBot.define do
     title { Faker::Lorem.sentence }
     description { Faker::Lorem.paragraph }
     company_name { Faker::Company.name }
-    logo_image { Rack::Test::UploadedFile.new(File.open('/home/poolstack/Downloads/2.jpg')) }
-    blog_image { Rack::Test::UploadedFile.new(File.open('/home/poolstack/Downloads/2.jpg')) }
+    logo_image { Rack::Test::UploadedFile.new(File.open('app/assets/image/aa.jpg')) }
+    blog_image { Rack::Test::UploadedFile.new(File.open('app/assets/image/aa.jpg')) }
   end
 end

@@ -4,8 +4,8 @@ RSpec.describe Blog, type: :model do
 
 
   subject {
-    described_class.new(company_name: "Poolstack Technologies", title: 'Web Development', description: "abcdhdhjfsjkfjsdfsikjsfhdjfhsdjfhdsjfhskjdhjdhcom",logo_image: Rack::Test::UploadedFile.new(Rails.root.join('/home/poolstack/Downloads/2.jpg'), 'image/jpg'),
-    blog_image: Rack::Test::UploadedFile.new(Rails.root.join('/home/poolstack/Downloads/2.jpg'), 'image/jpg'))
+    described_class.new(company_name: "Poolstack Technologies", title: 'Web Development', description: "abcdhdhjfsjkfjsdfsikjsfhdjfhsdjfhdsjfhskjdhjdhcom",logo_image: Rack::Test::UploadedFile.new(Rails.root.join('app/assets/image/aa.jpg'), 'image/jpg'),
+    blog_image: Rack::Test::UploadedFile.new(Rails.root.join('app/assets/image/aa.jpg'), 'image/jpg'))
   }
 
   it "should be valid with valid attributes" do
@@ -43,7 +43,7 @@ RSpec.describe Blog, type: :model do
   end
 
   it "should be valid with presence" do
-    blog = Blog.new(company_name: "Poolstack Technologies", title: 'Web Development', description: "abcdhdhjfsjkfjsdfsikjsfhdjfhsdjfhdsjfhskjdhjdhcom", blog_image: Rack::Test::UploadedFile.new(Rails.root.join('/home/poolstack/Downloads/2.jpg'), 'image/jpg'),logo_image: Rack::Test::UploadedFile.new(Rails.root.join('/home/poolstack/Downloads/2.jpg'), 'image/jpg'))
+    blog = Blog.new(company_name: "Poolstack Technologies", title: 'Web Development', description: "abcdhdhjfsjkfjsdfsikjsfhdjfhsdjfhdsjfhskjdhjdhcom", blog_image: Rack::Test::UploadedFile.new(Rails.root.join('app/assets/image/aa.jpg'), 'image/jpg'),logo_image: Rack::Test::UploadedFile.new(Rails.root.join('app/assets/image/aa.jpg'), 'image/jpg'))
     expect(blog.save).to eq(true)
   end
 
@@ -53,42 +53,8 @@ RSpec.describe Blog, type: :model do
   end
 
   it "should valid with format" do
-    blog = Blog.new(company_name: "Poolstack Technologies", title: 'Web Development', description: "abcdhdhjfsjkfjsdfsikjsfhdjfhsdjfhdsjfhskjdhjdhcom", blog_image: Rack::Test::UploadedFile.new(Rails.root.join('/home/poolstack/Downloads/2.jpg'), 'image/jpg'),logo_image: Rack::Test::UploadedFile.new(Rails.root.join('/home/poolstack/Downloads/2.jpg'), 'image/jpg'))
+    blog = Blog.new(company_name: "Poolstack Technologies", title: 'Web Development', description: "abcdhdhjfsjkfjsdfsikjsfhdjfhsdjfhdsjfhskjdhjdhcom", blog_image: Rack::Test::UploadedFile.new(Rails.root.join('app/assets/image/aa.jpg'), 'image/jpg'),logo_image: Rack::Test::UploadedFile.new(Rails.root.join('app/assets/image/aa.jpg'), 'image/jpg'))
     expect(blog.save).to eq(true)
   end
-
-  # describe 'validations' do
-
-  #       before(:each) do
-  #         @blog = FactoryBot.build(:blog, company_name: "Poolstack Technologies", title: 'Web Development', description: "abcdhdhjfsjkfjsdfsikjsfhdjfhsdjfhdsjfhskjdhjdhcom", blog_image: Rack::Test::UploadedFile.new(Rails.root.join('/home/poolstack/Downloads/2.jpg'), 'image/jpg'),logo_image: Rack::Test::UploadedFile.new(Rails.root.join('/home/poolstack/Downloads/2.jpg'), 'image/jpg'))
-  #         @blog.save
-  #       end
-
-  #   # let(:blog) { build(:blog) }
-  #   describe 'validate_logo_image_content_type' do
-  #     it 'adds an error if logo_image is not an allowed content type' do
-  #       @blog.logo_image.attach(io: File.open('/home/poolstack/2.txt'), filename: 'image.txt', content_type: 'text/plain')
-  #       @blog.validate_logo_image_content_type
-  #       expect(@blog.errors[:logo_image]).to include('must be a JPEG, JPG, GIF or PNG')
-  #     end
-  #     it 'does not add an error if logo_image is an allowed content type' do
-  #       @blog.logo_image.attach(io: File.open('/home/poolstack/Downloads/2.jpg'), filename: 'image.jpg', content_type: 'image/jpg')
-  #       @blog.validate_logo_image_content_type
-  #       expect(@blog.errors[:logo_image]).to be_empty
-  #     end
-  #   end
-  #   describe 'validate_blog_image_content_type' do
-  #     it 'adds an error if blog_image is not an allowed content type' do
-  #       @blog.blog_image.attach(io: File.open('/home/poolstack/2.txt'), filename: 'image.txt', content_type: 'text/plain')
-  #       @blog.validate_blog_image_content_type
-  #       expect(@blog.errors[:blog_image]).to include('must be a JPEG, JPG, GIF or PNG')
-  #     end
-  #     it 'does not add an error if blog_image is an allowed content type' do
-  #       @blog.blog_image.attach(io: File.open('/home/poolstack/Downloads/2.jpg'), filename: 'image.jpg', content_type: 'image/jpg')
-  #       @blog.validate_blog_image_content_type
-  #       expect(@blog.errors[:blog_image]).to be_empty
-  #     end
-  #   end
-  # end
 
 end

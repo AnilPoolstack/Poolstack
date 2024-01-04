@@ -52,7 +52,7 @@ RSpec.describe Service, type: :model do
   end
 
   it 'To check the validation when creating a new Service' do
-    service = Service.new(service_name: 'Valid Service Name', service_description: 'Valid service description within limits', service_image: Rack::Test::UploadedFile.new(Rails.root.join('/home/poolstack/Pictures/model rspec.png'), 'image/png'))
+    service = Service.new(category: :frontend_development, service_name: 'Valid Service Name', service_description: 'Valid service description within limits',service_image: Rack::Test::UploadedFile.new(Rails.root.join('app/assets/image/aa.jpg'), 'image/jpg'))
     expect(service.valid?).to eq(true)
   end
   

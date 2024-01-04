@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe "Blogs", type: :request do
 
   describe "GET /index" do
-        
 
     context "Get all the Blogs" do
 
@@ -28,6 +27,7 @@ RSpec.describe "Blogs", type: :request do
   end
 
   describe 'Create the Blog' do
+
     context 'with invalid data' do
       it 'does not create a new blog and returns unprocessable_entity status' do
         blog = FactoryBot.create(:blog, company_name: 'Poolstack Technologies', title: 'Web Development')
@@ -65,7 +65,8 @@ RSpec.describe "Blogs", type: :request do
       expect(response).to have_http_status(201)
       res = JSON.parse(response.body)
       expect(res.count).to eq(6)
-     end
+    end
+
   end
 
   describe 'Delete the Data' do
