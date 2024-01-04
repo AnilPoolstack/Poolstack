@@ -13,6 +13,11 @@ class ContactsController < ApplicationController
         end
     end
 
+    def country_code
+        @country_code = JSON.parse(HTTParty.get("http://country.io/phone.json").body)
+        render json: @country_code
+    end
+
     private
     def contact_params
         params.require(:contact).permit(:full_name,:email,:message,:contact_number,:country_code)
