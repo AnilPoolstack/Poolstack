@@ -13,8 +13,12 @@ ActiveAdmin.register Service do
     id_column
     column :service_name
     column :service_description do |service|
-      raw service.service_description.gsub(/<img/, '<img style="max-width: 100px; max-height: 100px;"')
-    end
+      truncated_length = 500
+      complete_description = strip_tags(service.service_description)
+      truncated_description = truncate(complete_description, length: truncated_length)
+      truncated_description += link_to('See more', admin_service_path(service)) if complete_description.length > truncated_length
+      raw(truncated_description.gsub(/<img/, '<img style="max-width: 80px; max-height: 80px;"'))
+   end
     column :service_image do |service|
       if service.service_image.attached?
         image_tag service.service_image, size: "100x100"
