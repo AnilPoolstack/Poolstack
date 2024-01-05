@@ -15,8 +15,12 @@ ActiveAdmin.register HomePage do
         image_tag home_page.background_image, size: "80x80"
       end
     end
-    column :content do |home_page|
-      raw home_page.content.gsub(/<img/, '<img style="max-width: 100px; max-height: 100px;"')
+    column :content do |content|
+      truncated_length = 500
+      complete_content = strip_tags(content.content)
+      truncated_content = truncate(complete_content, length: truncated_length)
+      truncated_content += link_to('See more', admin_home_page_path(content)) if complete_content.length > truncated_length
+      raw(truncated_content.gsub(/<img/, '<img style="max-width: 80px; max-height: 80px;"'))
     end
     column :created_at
     column :updated_at
