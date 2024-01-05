@@ -14,4 +14,5 @@ class ServiceSerializer < ActiveModel::Serializer
       nil
     end
   end
+
 end

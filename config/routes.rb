@@ -8,7 +8,8 @@ Rails.application.routes.draw do
 
   resources :home_pages, only: [:show, :index]
   resources :services
-  resources :contacts, only: [:create]
+  resources :contacts
+  get 'country_code', to: 'contacts#country_code'
   resources :categories
  
 end
