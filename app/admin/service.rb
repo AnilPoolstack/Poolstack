@@ -11,6 +11,7 @@ ActiveAdmin.register Service do
   index do
     selectable_column
     id_column
+    column :category
     column :service_name
     column :service_description do |service|
       truncated_length = 500
