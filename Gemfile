@@ -4,6 +4,7 @@ ruby "3.0.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '7.1.1'
+gem 'jwt'
 
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
@@ -64,8 +65,6 @@ gem 'rspec-sonarqube-formatter', '1.5.0'
 gem 'factory_bot_rails'
 gem 'faker'
 
-
-
 gem 'rails-controller-testing'
 
 gem 'activeadmin_quill_editor'
@@ -73,3 +72,8 @@ gem 'sassc'
 
 
 gem 'active_model_serializers'
+
+gem 'factory_bot_rails'
+gem 'activeadmin_quill_editor'
+gem 'image_processing', '~> 1.2'
+
