@@ -58,6 +58,7 @@ gem 'sassc-rails'
 gem 'devise'
 gem 'phone'
 gem 'country_select'
+gem 'httparty'
 
 
 gem 'simplecov', '0.17.0'

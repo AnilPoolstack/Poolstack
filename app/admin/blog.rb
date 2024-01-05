@@ -12,7 +12,11 @@ ActiveAdmin.register Blog do
         column :company_name
         column :title
         column :description do |blog|
-          raw blog.description.gsub(/<img/, '<img style="max-width: 100px; max-height: 100px;"')
+          truncated_length = 200
+          complete_description = strip_tags(blog.description)
+          truncated_description = truncate(complete_description, length: truncated_length)
+          truncated_description += link_to('See more', admin_blog_path(blog)) if complete_description.length > truncated_length
+          raw(truncated_description.gsub(/<img/, '<img style="max-width: 80px; max-height: 80px;"'))
         end
         column :blog_image do |blog|
           if blog.blog_image.attached?

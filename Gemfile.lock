@@ -140,6 +140,9 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
     htmlentities (4.3.4)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.2)
@@ -186,6 +189,7 @@ GEM
     mini_mime (1.1.5)
     minitest (5.20.0)
     msgpack (1.7.2)
+    multi_xml (0.6.0)
     mutex_m (0.2.0)
     net-imap (0.4.9)
       date
@@ -340,6 +344,7 @@ DEPENDENCIES
   devise
   factory_bot_rails
   faker
+  httparty
   image_processing (~> 1.2)
   jwt
   phone
