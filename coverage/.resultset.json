@@ -1121,6 +1121,10 @@
         0,
         0,
         0,
+        0,
+        0,
+        0,
+        0,
         null,
         0,
         0,
@@ -1702,8 +1706,8 @@
         null,
         1,
         1,
-        14,
-        14,
+        15,
+        15,
         9,
         null,
         null,
@@ -2004,7 +2008,7 @@
         null,
         1,
         1,
-        0,
+        1,
         null,
         null,
         null
@@ -2490,7 +2494,6 @@
         null,
         null,
         null,
-        null,
         1,
         null,
         1,
@@ -2777,6 +2780,30 @@
         1,
         null
       ],
+      "/home/poolstack/Desktop/office/Poolstack/app/serializers/home_page_serializer.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        2,
+        2,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/home/poolstack/Desktop/office/Poolstack/app/controllers/services_controller.rb": [
         1,
         1,
@@ -2837,6 +2864,6 @@
         null
       ]
     },
-    "timestamp": 1704361838
+    "timestamp": 1704435926
   }
 }
