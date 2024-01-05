@@ -83,14 +83,12 @@ RSpec.describe 'Comments API', type: :request do
 
   describe 'DELETE /comments/:id' do
     let!(:comment) { create(:comment) }
-
     it 'destroys the comment' do
       expect do
         delete "/comments/#{comment.id}"
       end.to change(Comment, :count).by(-1)
       expect(response).to have_http_status(:ok)
     end
-
     it 'returns unprocessable_entity status when deletion fails' do
       allow_any_instance_of(Comment).to receive(:destroy).and_return(false)
       delete "/comments/#{comment.id}"

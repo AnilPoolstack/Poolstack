@@ -1,26 +1,10 @@
 ActiveAdmin.register Comment, as: 'BlogComment' do
 
-  # See permitted parameters documentation:
-  # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # Uncomment all parameters which should be permitted for assignment
-  #
-  # permit_params :email, :content, :blog_id
-  #
-  # or
-  #
-  # permit_params do
-  #   permitted = [:email, :content, :blog_id]
-  #   permitted << :other if params[:action] == 'create' && current_user.admin?
-  #   permitted
-  # end
-
-
+  
   permit_params :email, :content, :blog_id
 
-  belongs_to :blog, optional: true # This specifies the association
+  belongs_to :blog, optional: true 
 
-  # Define the index view to display comments for a specific blog
   controller  do
     def scoped_collection
       if params[:blog_id].present?
@@ -47,18 +31,5 @@ ActiveAdmin.register Comment, as: 'BlogComment' do
       row :updated_at
     end
   end
-
-
-
-  # form do |f|
-  #   f.inputs do
-      
-  #     f.inputs :email
-  #     f.inputs :content
-  #     # f.inputs :blog_id
-      
-  #   end
-  #   f.actions
-  # end
   
 end

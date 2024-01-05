@@ -1,6 +1,7 @@
 class Blog < ApplicationRecord
     has_one_attached :logo_image
     has_one_attached :blog_image
+    has_many :comments
     validates :title, :description, :company_name, :logo_image, :blog_image, presence: true
     validates :title, :company_name, format: { with: /\A[a-z A-Z]+\z/, message: "only allows letters" }
     validates :title, length: { minimum: 4, maximum: 50, message: "should be between 4 and 50 characters" }
@@ -23,5 +24,4 @@ class Blog < ApplicationRecord
             errors.add(:blog_image, 'must be an allowed image type (JPEG or PNG, GIF or JPG)')
         end
     end 
-
 end
