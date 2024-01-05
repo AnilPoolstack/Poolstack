@@ -4,8 +4,8 @@ RSpec.describe Blog, type: :model do
 
 
   subject {
-    described_class.new(company_name: "Poolstack Technologies", title: 'Web Development', description: "abcdhdhjfsjkfjsdfsikjsfhdjfhsdjfhdsjfhskjdhjdhcom",logo_image: Rack::Test::UploadedFile.new(Rails.root.join('/home/poolstack/Downloads/2.jpg'), 'image/jpg'),
-    blog_image: Rack::Test::UploadedFile.new(Rails.root.join('/home/poolstack/Downloads/2.jpg'), 'image/jpg'))
+    described_class.new(company_name: "Poolstack Technologies", title: 'Web Development', description: "abcdhdhjfsjkfjsdfsikjsfhdjfhsdjfhdsjfhskjdhjdhcom",logo_image: Rack::Test::UploadedFile.new(Rails.root.join('app/assets/image/aa.jpg'), 'image/jpg'),
+    blog_image: Rack::Test::UploadedFile.new(Rails.root.join('app/assets/image/aa.jpg'), 'image/jpg'))
   }
 
   it "should be valid with valid attributes" do
@@ -43,7 +43,7 @@ RSpec.describe Blog, type: :model do
   end
 
   it "should be valid with presence" do
-    blog = Blog.new(company_name: "Poolstack Technologies", title: 'Web Development', description: "abcdhdhjfsjkfjsdfsikjsfhdjfhsdjfhdsjfhskjdhjdhcom", blog_image: Rack::Test::UploadedFile.new(Rails.root.join('/home/poolstack/Downloads/2.jpg'), 'image/jpg'),logo_image: Rack::Test::UploadedFile.new(Rails.root.join('/home/poolstack/Downloads/2.jpg'), 'image/jpg'))
+    blog = Blog.new(company_name: "Poolstack Technologies", title: 'Web Development', description: "abcdhdhjfsjkfjsdfsikjsfhdjfhsdjfhdsjfhskjdhjdhcom", blog_image: Rack::Test::UploadedFile.new(Rails.root.join('app/assets/image/aa.jpg'), 'image/jpg'),logo_image: Rack::Test::UploadedFile.new(Rails.root.join('app/assets/image/aa.jpg'), 'image/jpg'))
     expect(blog.save).to eq(true)
   end
 
@@ -53,7 +53,7 @@ RSpec.describe Blog, type: :model do
   end
 
   it "should valid with format" do
-    blog = Blog.new(company_name: "Poolstack Technologies", title: 'Web Development', description: "abcdhdhjfsjkfjsdfsikjsfhdjfhsdjfhdsjfhskjdhjdhcom", blog_image: Rack::Test::UploadedFile.new(Rails.root.join('/home/poolstack/Downloads/2.jpg'), 'image/jpg'),logo_image: Rack::Test::UploadedFile.new(Rails.root.join('/home/poolstack/Downloads/2.jpg'), 'image/jpg'))
+    blog = Blog.new(company_name: "Poolstack Technologies", title: 'Web Development', description: "abcdhdhjfsjkfjsdfsikjsfhdjfhsdjfhdsjfhskjdhjdhcom", blog_image: Rack::Test::UploadedFile.new(Rails.root.join('app/assets/image/aa.jpg'), 'image/jpg'),logo_image: Rack::Test::UploadedFile.new(Rails.root.join('app/assets/image/aa.jpg'), 'image/jpg'))
     expect(blog.save).to eq(true)
   end
 

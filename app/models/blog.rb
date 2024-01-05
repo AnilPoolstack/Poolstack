@@ -24,5 +24,4 @@ class Blog < ApplicationRecord
             errors.add(:blog_image, 'must be an allowed image type (JPEG or PNG, GIF or JPG)')
         end
     end 
-
 end

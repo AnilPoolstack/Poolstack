@@ -1,24 +1,23 @@
 class HomePagesController < ApplicationController
   def index
-  @home_pages = HomePage.all
+    @home_pages = HomePage.all
 
-  if @home_pages.any?
-    render json: @home_pages, status: :ok
-  else
-    render json: { message: 'No home pages found' }, status: :not_found
-  end 
-end
+    if @home_pages.any?
+      render json: @home_pages, each_serializer: HomePageSerializer, status: :ok
+    else
+      render json: { message: 'No home pages found' }, status: :not_found
+    end
+  end
 
   def show
-  @home_page = HomePage.find_by(id: params[:id])
+    @home_page = HomePage.find_by(id: params[:id])
 
-  if @home_page
-    render json: { message: 'Home page found', home_page: @home_page }, status: :ok
-  else
-    render json: { error: 'Home page not found' }, status: :not_found
+    if @home_page
+      render json: @home_page, serializer: HomePageSerializer, status: :ok
+    else
+      render json: { error: 'Home page not found' }, status: :not_found
+    end
   end
-end
-
 
   private
 

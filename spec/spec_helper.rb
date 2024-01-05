@@ -27,7 +27,6 @@ SimpleCov.start do
   add_filter %r{vendor/ruby/ruby/2.*}
 end
 RSpec.configure do |config|
-
   config.include FactoryBot::Syntax::Methods
 
   # rspec-expectations config goes here. You can use an alternate

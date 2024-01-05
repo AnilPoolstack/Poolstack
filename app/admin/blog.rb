@@ -1,6 +1,6 @@
 ActiveAdmin.register Blog do
     permit_params :company_name, :title, :description, :blog_image, :logo_image
-
+    
     index do
         selectable_column
         id_column
@@ -12,7 +12,11 @@ ActiveAdmin.register Blog do
         column :company_name
         column :title
         column :description do |blog|
-          raw blog.description.gsub(/<img/, '<img style="max-width: 100px; max-height: 100px;"')
+          truncated_length = 200
+          complete_description = strip_tags(blog.description)
+          truncated_description = truncate(complete_description, length: truncated_length)
+          truncated_description += link_to('See more', admin_blog_path(blog)) if complete_description.length > truncated_length
+          raw(truncated_description.gsub(/<img/, '<img style="max-width: 80px; max-height: 80px;"'))
         end
         column :blog_image do |blog|
           if blog.blog_image.attached?
@@ -24,27 +28,27 @@ ActiveAdmin.register Blog do
         actions
     end
 
-  show do |user|
-    attributes_table do
-      row :logo_image do |blog|
-        if blog.logo_image.attached?
-          image_tag blog.logo_image, size: "80x80"
+    show title: "BLOG" do
+      attributes_table do
+        row :logo_image do |blog|
+          if blog.logo_image.attached?
+            image_tag blog.logo_image, size: "80x80"
+          end
         end
-      end
-      row :company_name
-      row :title
-      row :description do |blog|
-        raw blog.description.gsub(/<img/, '<img style="max-width: 100px; max-height: 100px;"')
-      end
-      row :blog_image do |blog|
-        if blog.blog_image.attached?
-          image_tag blog.blog_image, size: "80x80"
+        row :company_name
+        row :title
+        row :description do |blog|
+          raw blog.description.gsub(/<img/, '<img style="max-width: 100px; max-height: 100px;"')
         end
+        row :blog_image do |blog|
+          if blog.blog_image.attached?
+            image_tag blog.blog_image, size: "80x80"
+          end
+        end
+        row :created_at
+        row :updated_at
       end
-      row :created_at
-      row :updated_at
     end
-  end
 
   filter :company_name
   filter :title

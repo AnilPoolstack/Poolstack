@@ -2,8 +2,8 @@ FactoryBot.define do
   factory :blog do
     title { "tydyt fc" }
     description { Faker::Lorem.paragraph }
-    company_name { "tdfty tdfty" }
-    logo_image { Rack::Test::UploadedFile.new(File.open('/home/poolstack/Downloads/f4.jpeg')) }
-    blog_image { Rack::Test::UploadedFile.new(File.open('/home/poolstack/Downloads/f4.jpeg')) }
+    company_name { Faker::Company.name }
+    logo_image { Rack::Test::UploadedFile.new(File.open('app/assets/image/aa.jpg')) }
+    blog_image { Rack::Test::UploadedFile.new(File.open('app/assets/image/aa.jpg')) }
   end
 end

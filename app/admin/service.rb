@@ -1,18 +1,25 @@
 ActiveAdmin.register Service do
-  permit_params :service_name, :service_description, :category, :service_image
+  permit_params :service_name, :service_description, :service_image, :category_id
 
   scope("All Categories", default: true) { |scope| scope.all }
-  scope("Frontend"){ |scope| scope.where(category: "frontend_development")}
-  scope("Backend"){ |scope| scope.where(category: "backend_development")}
-  scope("DevOps"){ |scope| scope.where(category: "devops")}
+  Category.pluck(:name).each do |name|
+    scope(name.titleize) do |scope|
+      scope.includes(:category).where(categories: { name: name })
+    end
+  end 
 
   index do
     selectable_column
     id_column
+    column :category
     column :service_name
     column :service_description do |service|
-      raw service.service_description.gsub(/<img/, '<img style="max-width: 100px; max-height: 100px;"')
-    end
+      truncated_length = 500
+      complete_description = strip_tags(service.service_description)
+      truncated_description = truncate(complete_description, length: truncated_length)
+      truncated_description += link_to('See more', admin_service_path(service)) if complete_description.length > truncated_length
+      raw(truncated_description.gsub(/<img/, '<img style="max-width: 80px; max-height: 80px;"'))
+   end
     column :service_image do |service|
       if service.service_image.attached?
         image_tag service.service_image, size: "100x100"
@@ -23,13 +30,16 @@ ActiveAdmin.register Service do
     actions
   end
 
-  show do |service|
+  show  title:"service" do |service|
     attributes_table do
+      row :id do
+        service.id
+      end
+      row :category
       row :service_name
       row :service_description do |service|
         raw service.service_description.gsub(/<img/, '<img style="max-width: 100px; max-height: 100px;"')
       end
-      row :category
       row :service_image do |service|
         if service.service_image.attached?
           image_tag service.service_image, size: "100x100"
@@ -40,10 +50,9 @@ ActiveAdmin.register Service do
     end
   end
     
-
   filter :service_name
   filter :service_description
-  filter :category    
+  filter :category_id, as: :select, collection: Category.all.map { |c| [c.name, c.id] }    
   filter :created_at
   filter :updated_at
 
@@ -51,7 +60,7 @@ ActiveAdmin.register Service do
     f.inputs do
       f.input :service_name
       f.input :service_description, as: :quill_editor 
-      f.input :category
+      f.input :category_id, as: :select, collection: Category.all.map { |c| [c.name, c.id] }
       f.input :service_image, as: :file
     end
     f.actions 
