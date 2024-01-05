@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/poolstack/Poolstack/spec/models/about_spec.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/models/about_spec.rb": [
         1,
         null,
         1,
@@ -34,7 +34,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/spec/rails_helper.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -118,14 +118,14 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/config/environment.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/home/poolstack/Poolstack/config/application.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/config/application.rb": [
         null,
         null,
         null,
@@ -203,13 +203,13 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/config/boot.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/config/boot.rb": [
         1,
         null,
         1,
         1
       ],
-      "/home/poolstack/Poolstack/config/environments/test.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/config/environments/test.rb": [
         1,
         null,
         null,
@@ -275,7 +275,7 @@
         1,
         null
       ],
-      "/home/poolstack/Poolstack/config/initializers/active_admin.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/config/initializers/active_admin.rb": [
         1,
         null,
         null,
@@ -630,7 +630,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/config/initializers/cors.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/config/initializers/cors.rb": [
         null,
         null,
         null,
@@ -648,7 +648,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/config/initializers/devise.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/config/initializers/devise.rb": [
         null,
         null,
         null,
@@ -964,7 +964,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/config/initializers/filter_parameter_logging.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
@@ -974,7 +974,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/config/initializers/inflections.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -992,7 +992,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/spec/factories/abouts.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/factories/abouts.rb": [
         1,
         1,
         4,
@@ -1002,7 +1002,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/spec/factories/blog.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/factories/blog.rb": [
         1,
         1,
         7,
@@ -1013,14 +1013,14 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/spec/factories/categories.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/factories/categories.rb": [
         1,
         1,
         5,
         null,
         null
       ],
-      "/home/poolstack/Poolstack/spec/factories/comments.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/factories/comments.rb": [
         1,
         1,
         8,
@@ -1030,7 +1030,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/spec/factories/contacts.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/factories/contacts.rb": [
         1,
         1,
         2,
@@ -1042,7 +1042,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/spec/factories/home_pages.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/factories/home_pages.rb": [
         1,
         1,
         1,
@@ -1052,7 +1052,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/spec/factories/service.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/factories/service.rb": [
         1,
         1,
         1,
@@ -1062,7 +1062,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/config/routes.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/config/routes.rb": [
         1,
         1,
         1,
@@ -1079,7 +1079,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/controllers/application_controller.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/controllers/application_controller.rb": [
         1,
         1,
         31,
@@ -1087,7 +1087,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/models/admin_user.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/models/admin_user.rb": [
         1,
         null,
         null,
@@ -1095,7 +1095,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/models/application_record.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/models/application_record.rb": [
         null,
         1,
         1,
@@ -1113,11 +1113,15 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/admin/about.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/admin/about.rb": [
         1,
         1,
         null,
         1,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -1166,7 +1170,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/models/about.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/models/about.rb": [
         1,
         1,
         null,
@@ -1187,7 +1191,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/admin/admin_users.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/admin/admin_users.rb": [
         1,
         1,
         null,
@@ -1217,7 +1221,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/admin/blog.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/admin/blog.rb": [
         1,
         1,
         null,
@@ -1290,7 +1294,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/models/blog.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/models/blog.rb": [
         1,
         1,
         1,
@@ -1319,146 +1323,65 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/admin/categories.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/admin/categories.rb": [
         1,
         1,
         null
       ],
-      "/home/poolstack/Poolstack/app/models/category.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/home/poolstack/Poolstack/app/admin/comments.rb": [
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        0,
-        0,
-        null,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/poolstack/Poolstack/app/models/comment.rb": [
-        1,
+      "/home/poolstack/Desktop/office/Poolstack/app/models/category.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/poolstack/Poolstack/app/admin/contacts.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/admin/comments.rb": [
         1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
         1,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        1,
         1,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
         null,
-        0,
-        null,
-        null,
-        null
-      ],
-      "/home/poolstack/Poolstack/app/models/contact.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/home/poolstack/Poolstack/app/admin/dashboard.rb": [
-        null,
-        1,
-        1,
-        null,
-        1,
-        0,
-        0,
-        0,
         0,
         null,
         null,
         null,
         null,
         null,
+        1,
+        0,
+        0,
+        0,
         null,
+        0,
+        0,
         null,
+        0,
+        0,
+        null,
+        0,
+        0,
         null,
         null,
         null,
@@ -1477,7 +1400,88 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/admin/home_page.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/models/comment.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/home/poolstack/Desktop/office/Poolstack/app/admin/contacts.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/poolstack/Desktop/office/Poolstack/app/models/contact.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/home/poolstack/Desktop/office/Poolstack/app/admin/dashboard.rb": [
+        null,
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/poolstack/Desktop/office/Poolstack/app/admin/home_page.rb": [
         1,
         1,
         null,
@@ -1495,6 +1499,10 @@
         0,
         null,
         null,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         null,
@@ -1540,7 +1548,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/models/home_page.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/models/home_page.rb": [
         1,
         1,
         1,
@@ -1554,93 +1562,83 @@
         1,
         null,
         1,
-        2,
-        2,
-        2,
-        null,
-        null,
-        null,
-        1,
-        2,
-        2,
+        16,
+        16,
         2,
         null,
         null,
         null,
-        null
-      ],
-      "/home/poolstack/Poolstack/app/admin/service.rb": [
         1,
-        1,
-        null,
-        1,
-        1,
-        0,
-        0,
-        null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
+        16,
+        16,
+        2,
         null,
         null,
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/models/service.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/admin/service.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
         1,
         1,
         1,
@@ -1651,6 +1649,31 @@
         null,
         1,
         1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/poolstack/Desktop/office/Poolstack/app/models/service.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        15,
+        15,
         15,
         15,
         9,
@@ -1658,7 +1681,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/spec/models/blog_spec.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/models/blog_spec.rb": [
         1,
         null,
         1,
@@ -1720,7 +1743,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/spec/models/category_spec.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/models/category_spec.rb": [
         1,
         null,
         1,
@@ -1746,7 +1769,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/spec/models/comment_spec.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/models/comment_spec.rb": [
         1,
         null,
         1,
@@ -1794,7 +1817,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/spec/models/contact_spec.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/models/contact_spec.rb": [
         1,
         1,
         1,
@@ -1857,7 +1880,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/spec/models/home_page_spec.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/models/home_page_spec.rb": [
         1,
         null,
         1,
@@ -1869,27 +1892,27 @@
         null,
         1,
         1,
-        0,
+        1,
         null,
         1,
         1,
-        0,
+        1,
         null,
         1,
         1,
-        0,
+        1,
         null,
         1,
         1,
-        0,
+        1,
         null,
         1,
         1,
-        0,
+        1,
         null,
         1,
         1,
-        0,
+        1,
         null,
         1,
         1,
@@ -1897,7 +1920,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/spec/models/service_spec.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/models/service_spec.rb": [
         1,
         null,
         1,
@@ -1951,6 +1974,7 @@
         null,
         null,
         null,
+        1,
         1,
         1,
         1,
@@ -1958,7 +1982,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/spec/requests/abouts_spec.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/requests/abouts_spec.rb": [
         1,
         1,
         1,
@@ -2070,7 +2094,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/controllers/abouts_controller.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/controllers/abouts_controller.rb": [
         1,
         1,
         3,
@@ -2114,7 +2138,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/spec/requests/blogs_spec.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/requests/blogs_spec.rb": [
         1,
         null,
         1,
@@ -2201,7 +2225,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/spec/requests/comments_spec.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/requests/comments_spec.rb": [
         1,
         null,
         null,
@@ -2303,7 +2327,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/spec/requests/contacts_controller_spec.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/requests/contacts_controller_spec.rb": [
         1,
         1,
         1,
@@ -2329,7 +2353,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/controllers/contacts_controller.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/controllers/contacts_controller.rb": [
         1,
         1,
         null,
@@ -2356,7 +2380,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/spec/requests/home_pages_spec.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/requests/home_pages_spec.rb": [
         1,
         null,
         1,
@@ -2422,7 +2446,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/controllers/home_pages_controller.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/controllers/home_pages_controller.rb": [
         1,
         1,
         3,
@@ -2444,7 +2468,6 @@
         null,
         null,
         null,
-        null,
         1,
         null,
         1,
@@ -2456,7 +2479,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/spec/requests/services_spec.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/spec/requests/services_spec.rb": [
         1,
         1,
         1,
@@ -2536,7 +2559,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/controllers/blogs_controller.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/controllers/blogs_controller.rb": [
         1,
         null,
         1,
@@ -2597,7 +2620,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/serializers/blog_serializer.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/serializers/blog_serializer.rb": [
         1,
         1,
         null,
@@ -2621,7 +2644,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/controllers/comments_controller.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/controllers/comments_controller.rb": [
         1,
         1,
         null,
@@ -2686,7 +2709,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/mailers/contact_mailer.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/mailers/contact_mailer.rb": [
         null,
         null,
         null,
@@ -2725,13 +2748,37 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/mailers/application_mailer.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/mailers/application_mailer.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/poolstack/Poolstack/app/controllers/services_controller.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/serializers/home_page_serializer.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        2,
+        2,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/poolstack/Desktop/office/Poolstack/app/controllers/services_controller.rb": [
         1,
         1,
         2,
@@ -2776,7 +2823,7 @@
         null,
         null
       ],
-      "/home/poolstack/Poolstack/app/serializers/service_serializer.rb": [
+      "/home/poolstack/Desktop/office/Poolstack/app/serializers/service_serializer.rb": [
         1,
         1,
         1,
