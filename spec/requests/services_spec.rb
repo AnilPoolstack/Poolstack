@@ -40,6 +40,7 @@ RSpec.describe "ServicesController", type: :request do
       end
     end
   end
+  #testing comment
   describe "GET/show" do
     context "Show the service" do
       it "return a service" do
